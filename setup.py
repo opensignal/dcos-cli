@@ -59,8 +59,7 @@ setup(
     packages=find_packages(exclude=['pydoc', 'tests', 'cli', 'bin']),
 
     install_requires=[
-        'gitpython>=1.0, <2.0',
-        'jsonschema==2.4',  # pin the exact version, jsonschema 2.5 broke py3
+        'jsonschema>=2.4',  # pin the exact version, jsonschema 2.5 broke py3
         'pager>=3.3, <4.0',
         'portalocker>=0.5, <1.0',
         'prettytable>=0.7, <1.0',
@@ -71,10 +70,6 @@ setup(
         'six>=1.9, <2.0',
         'toml>=0.9, <1.0',
     ],
-
-    extras_require={
-        ':python_version=="2.7"': ['futures>=3.0, <4.0'],
-    },
 
     package_data={
         'dcos': [
